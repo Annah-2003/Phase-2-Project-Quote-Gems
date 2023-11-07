@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // Fetch data from 'http://localhost:3001' or your API endpoint
+    // Fetches data from 'http://localhost:3001' endpoint
     fetch('http://localhost:3001')
       .then((response) => response.json())
       .then((data) => setData(data))
