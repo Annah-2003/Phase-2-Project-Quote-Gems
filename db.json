@@ -1,62 +1,105 @@
-[
-    {
-        "author": "Steve Jobs",
-        "quote": "The only way to do great work is to love what you do."
-    },
-    {
-        "author": "Robert Frost",
-        "quote": "In three words I can sum up everything I've learned about life: it goes on."
-    },
-    {
-        "author": "Eleanor Roosevelt",
-        "quote": "The future belongs to those who believe in the beauty of their dreams."
-    },
-    {
-        "author": "Wayne Gretzky",
-        "quote": "You miss 100% of the shots you don't take."
-    },
-    {
-        "author": "Winston Churchill",
-        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts."
-    },
-    {
-        "author": "Franklin D. Roosevelt",
-        "quote": "The only limit to our realization of tomorrow will be our doubts of today."
-    },
-    {
-        "author": "Muhammad Ali",
-        "quote": "Don't count the days, make the days count."
-    },
-    {
-        "author": "Steve Jobs",
-        "quote": "The only way to do great work is to love what you do."
-    },
-    {
-        "author": "Franklin D. Roosevelt",
-        "quote": "The only limit to our realization of tomorrow will be our doubts of today."
-    },
-    {
-        "author": "Steve Jobs",
-        "quote": "The only way to do great work is to love what you do."
-    },
-    {
-        "author": "Robert Frost",
-        "quote": "In three words I can sum up everything I've learned about life: it goes on."
-    },
-    {
-        "author": "Eleanor Roosevelt",
-        "quote": "The future belongs to those who believe in the beauty of their dreams."
-    },
-    {
-        "author": "Winston Churchill",
-        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts."
-    },
-    {
-        "author": "Wayne Gretzky",
-        "quote": "You miss 100% of the shots you don't take."
-    },
-    {
-        "author": "Muhammad Ali",
-        "quote": "Don't count the days, make the days count."
-    }
-]
+{
+    "quotes": [
+      {
+        "quote": "The only way to do great work is to love what you do.",
+        "author": "Steve Jobs"
+      },
+      {
+        "quote": "In three words I can sum up everything I've learned about life: it goes on.",
+        "author": "Robert Frost"
+      },
+      {
+        "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+        "author": "Nelson Mandela"
+      },
+      {
+        "quote": "Life is really simple, but we insist on making it complicated.",
+        "author": "Confucius"
+      },
+      {
+        "quote": "The best time to plant a tree was 20 years ago. The second best time is now.",
+        "author": "Chinese Proverb"
+      },
+      {
+        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "author": "Winston Churchill"
+      },
+      {
+        "quote": "You miss 100% of the shots you don't take.",
+        "author": "Wayne Gretzky"
+      },
+      {
+        "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+        "author": "Franklin D. Roosevelt"
+      },
+      {
+        "quote": "The way to get started is to quit talking and begin doing.",
+        "author": "Walt Disney"
+      },
+      {
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "author": "Eleanor Roosevelt"
+      },
+      {
+        "quote": "In the middle of every difficulty lies opportunity.",
+        "author": "Albert Einstein"
+      },
+      {
+        "quote": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+        "author": "Buddha"
+      },
+      {
+        "quote": "The only thing we have to fear is fear itself.",
+        "author": "Franklin D. Roosevelt"
+      },
+      {
+        "quote": "It does not matter how slowly you go as long as you do not stop.",
+        "author": "Confucius"
+      },
+      {
+        "quote": "It's not the years in your life that count. It's the life in your years.",
+        "author": "Abraham Lincoln"
+      },
+      {
+        "quote": "You can't use up creativity. The more you use, the more you have.",
+        "author": "Maya Angelou"
+      },
+      {
+        "quote": "The only true wisdom is in knowing you know nothing.",
+        "author": "Socrates"
+      },
+      {
+        "quote": "The biggest risk is not taking any risk. In a world that's changing quickly, the only strategy that is guaranteed to fail is not taking risks.",
+        "author": "Mark Zuckerberg"
+      },
+      {
+        "quote": "You are never too old to set another goal or to dream a new dream.",
+        "author": "C.S. Lewis"
+      },
+      {
+        "quote": "I can't change the direction of the wind, but I can adjust my sails to always reach my destination.",
+        "author": "Jimmy Dean"
+      },
+      {
+        "quote": "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+        "author": "Martin Luther King Jr."
+      },
+      {
+        "quote": "It is during our darkest moments that we must focus to see the light.",
+        "author": "Aristotle"
+      },
+      {
+        "quote": "Don't count the days, make the days count.",
+        "author": "Muhammad Ali"
+      },
+      {
+        "quote": "The only thing necessary for the triumph of evil is for good men to do nothing.",
+        "author": "Edmund Burke"
+      },
+      {
+        "quote": "Life is what happens when you're busy making other plans.",
+        "author": "John Lennon"
+      }
+    ]
+  }
+  
