@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import QuoteList from './ routes/QuotesLIst';
-import AuthorList from './ routes/ AuthorList';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import QuoteList from './ routes/QuotesLIst'; 
+import AuthorList from './ routes/ AuthorList'; 
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <Switch>
-            <Route path="/quotes" component={QuoteList} />
-            <Route path="/authors" component={AuthorList} />
-          </Switch>
-        </div>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/quotes" element={<QuoteList />} />
+          <Route path="/authors" element={<AuthorList />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
