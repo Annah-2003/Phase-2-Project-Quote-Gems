@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import QuoteList from './routes/QuoteList';
-import AuthorList from './routes/AuthorList';
+import QuoteList from './ routes/QuotesLIst';
+import AuthorList from './ routes/ AuthorList';
 
 class App extends Component {
   render() {
