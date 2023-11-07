@@ -1,12 +1,62 @@
-{
-    "_id": "6GGoFR7ekS4A",
-    "author": "Babatunde Olatunji",
-    "authorSlug": "babatunde-olatunji",
-    "content": "Yesterday is history. Tomorrow is a mystery. And today? Today is a gift. That is why we call it the present.",
-    "dateAdded": "2020-05-21",
-    "dateModified": "2023-04-14",
-    "length": 108,
-    "tags": [
-        "Famous Quotes"
-    ]
-}
+[
+    {
+        "author": "Steve Jobs",
+        "quote": "The only way to do great work is to love what you do."
+    },
+    {
+        "author": "Robert Frost",
+        "quote": "In three words I can sum up everything I've learned about life: it goes on."
+    },
+    {
+        "author": "Eleanor Roosevelt",
+        "quote": "The future belongs to those who believe in the beauty of their dreams."
+    },
+    {
+        "author": "Wayne Gretzky",
+        "quote": "You miss 100% of the shots you don't take."
+    },
+    {
+        "author": "Winston Churchill",
+        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts."
+    },
+    {
+        "author": "Franklin D. Roosevelt",
+        "quote": "The only limit to our realization of tomorrow will be our doubts of today."
+    },
+    {
+        "author": "Muhammad Ali",
+        "quote": "Don't count the days, make the days count."
+    },
+    {
+        "author": "Steve Jobs",
+        "quote": "The only way to do great work is to love what you do."
+    },
+    {
+        "author": "Franklin D. Roosevelt",
+        "quote": "The only limit to our realization of tomorrow will be our doubts of today."
+    },
+    {
+        "author": "Steve Jobs",
+        "quote": "The only way to do great work is to love what you do."
+    },
+    {
+        "author": "Robert Frost",
+        "quote": "In three words I can sum up everything I've learned about life: it goes on."
+    },
+    {
+        "author": "Eleanor Roosevelt",
+        "quote": "The future belongs to those who believe in the beauty of their dreams."
+    },
+    {
+        "author": "Winston Churchill",
+        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts."
+    },
+    {
+        "author": "Wayne Gretzky",
+        "quote": "You miss 100% of the shots you don't take."
+    },
+    {
+        "author": "Muhammad Ali",
+        "quote": "Don't count the days, make the days count."
+    }
+]

@@ -19,7 +19,7 @@ The website implements basic error handling to notify users if there are issues 
 To access the Quote Gems Webbsite;
 Open the folder on your VS Code and open the HTML file on your browser by clicking the go live button on the bottom right side of your screen.
 Now you can clearly see the website and the quote of the day together with the features it comes with. If you'd like to get a new quote click on the Get New Quote Button and it will automatically generate a new quote for you.
-## Click this link;https://github.com/Annah-2003/Phase-1-Project-Quote-Gems
+## Click this link;https://github.com/Annah-2003/Phase-2-Project-Quote-Gems
 
 
 
