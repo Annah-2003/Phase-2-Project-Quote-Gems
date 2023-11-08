@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Quote = ({ text }) => <div>{text}</div>;
+function Quote({ quote }) {
+  return (
+    <div className="quote">
+      <p>{quote}</p>
+    </div>
+  );
+}
+
 export default Quote;
-
-
