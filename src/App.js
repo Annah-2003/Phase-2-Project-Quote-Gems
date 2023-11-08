@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import QuoteList from './ routes/QuotesLIst';
-import AuthorList from './ routes/ AuthorList';
+import QuoteList from './routes/QuoteList';
+import AuthorList from './routes/AuthorList';
 
 function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // Fetches data from 'http://localhost:3001' endpoint
-    fetch('http://localhost:3001')
+    // Fetch data from your API endpoint
+    fetch('http://localhost:3000/quotes')
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching data:', error));

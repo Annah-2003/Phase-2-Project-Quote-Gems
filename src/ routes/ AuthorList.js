@@ -9,7 +9,7 @@ const AuthorList = () => {
   // Function to fetch author data from an API
   const fetchAuthorsData = async () => {
     try {
-      const response = await fetch('http://localhost:3001'); // Replace with your API endpoint
+      const response = await fetch('http://localhost:3001/authors'); // Replace with your API endpoint
       if (response.ok) {
         const data = await response.json();
         setAuthors(data);
