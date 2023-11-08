@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Header from './Header';
-import Quote from './Quote';
-import Author from './Author';
-import Footer from './Footer';
+import Header from './components/Header';
+import Quotes from './components/Quotes';
+import Author from './components/Author';
+import Footer from './components/Footer';
 
 function App() {
   const [quoteData, setQuoteData] = useState(null);
@@ -11,10 +11,15 @@ function App() {
     fetch('http://localhost:3000/quotes')
       .then((response) => response.json())
       .then((data) => {
-        // Get a random quote from the array
-        const randomIndex = Math.floor(Math.random() * data.quotes.length);
-        setQuoteData(data.quotes[randomIndex]);
+        console.log(data); // Add this line to inspect the data
+        if (data.quotes && data.quotes.length > 0) {
+          const randomIndex = Math.floor(Math.random() * data.quotes.length);
+          setQuoteData(data.quotes[randomIndex]);
+        } else {
+          console.error("No quotes available in the data.");
+        }
       })
+      
       .catch((error) => console.error(error));
   }, []);
 
@@ -23,7 +28,7 @@ function App() {
       <Header />
       {quoteData && (
         <>
-          <Quote quote={quoteData.quote} />
+          <Quotes quote={quoteData.quote} />
           <Author author={quoteData.author} />
         </>
       )}
