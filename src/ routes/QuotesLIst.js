@@ -1,5 +1,5 @@
 import React from 'react';
-import Quote from '../components/Quote';
+import Quote from '../components/Quotes';
 import Button from '../components/Button';
 
 const QuoteList = ({ data }) => {
