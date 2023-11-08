@@ -1,28 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import QuoteList from './ routes/QuotesLIst';
-import AuthorList from './ routes/ AuthorList';
-import './App.css';
+import Header from './Header';
+import Quote from './Quote';
+import Author from './Author';
+import Footer from './Footer';
+
 function App() {
-  const [data, setData] = useState([]);
+  const [quoteData, setQuoteData] = useState(null);
 
   useEffect(() => {
-    // Fetch data from your API endpoint
     fetch('http://localhost:3000/quotes')
       .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error('Error fetching data:', error));
+      .then((data) => {
+        // Get a random quote from the array
+        const randomIndex = Math.floor(Math.random() * data.quotes.length);
+        setQuoteData(data.quotes[randomIndex]);
+      })
+      .catch((error) => console.error(error));
   }, []);
 
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/quotes" element={<QuoteList data={data} />} />
-          <Route path="/authors" element={<AuthorList data={data} />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <Header />
+      {quoteData && (
+        <>
+          <Quote quote={quoteData.quote} />
+          <Author author={quoteData.author} />
+        </>
+      )}
+      <Footer />
+    </div>
   );
 }
 
