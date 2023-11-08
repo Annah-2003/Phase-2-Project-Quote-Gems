@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Author from '../components/Author';
 import Button from '../components/Button';
 
-const AuthorList = () => {
+const AuthorList = ({ data }) => {
   // State to store the authors data
   const [authors, setAuthors] = useState([]);
 
   // Function to fetch author data from an API
   const fetchAuthorsData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/authors'); // Replace with your API endpoint
+      const response = await fetch('http://localhost:3000/authors'); // Replace with your API endpoint
       if (response.ok) {
         const data = await response.json();
         setAuthors(data);

@@ -1,14 +1,11 @@
 import React from 'react';
-import Quote from '../components/Quotes';
+import Quote from '../components/Quote';
 import Button from '../components/Button';
 
-const QuoteList = () => {
-  // Fetch or generate quotes data here
-  const quotes = []; // Your quotes data goes here
-
+const QuoteList = ({ data }) => {
   return (
     <div>
-      {quotes.map((quote, index) => (
+      {data.map((quote, index) => (
         <Quote key={index} text={quote.text} />
       ))}
       <Button action="generate" />

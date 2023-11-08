@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import QuoteList from './routes/QuoteList';
-import AuthorList from './routes/AuthorList';
+import QuoteList from './ routes/QuotesLIst';
+import AuthorList from './ routes/ AuthorList';
 
 function App() {
   const [data, setData] = useState([]);
