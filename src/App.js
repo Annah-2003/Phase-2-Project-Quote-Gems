@@ -1,4 +1,4 @@
-// App.js
+// Imports components
 import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Quotes from './components/Quotes';
@@ -8,10 +8,13 @@ import Button from './components/Button';
 import FavoriteButton from './components/FavoriteButton';
 import FavoritesList from './components/FavoritesList'; 
 
+// Main App Component
 function App() {
+  // State to hold the current quote data and favorite quotes
   const [quoteData, setQuoteData] = useState(null);
   const [favorites, setFavorites] = useState([]);
 
+  // Function fetches a random quote from the quotable API
   const fetchRandomQuote = () => {
     fetch('https://api.quotable.io/random')
       .then((response) => response.json())
@@ -26,6 +29,7 @@ function App() {
       .catch((error) => console.error(error));
   };
 
+  // adds the current quote to list of favorites
   const addToFavorites = () => {
     if (quoteData) {
       setFavorites([...favorites, quoteData]);
@@ -33,13 +37,16 @@ function App() {
     }
   };
 
+  // Fetches a random quote 
   useEffect(() => {
     fetchRandomQuote();
   }, []);
 
+  // JSX structure for App component
   return (
     <div className="App">
       <Header />
+      {/* Display quote-related componen quote is available */}
       {quoteData && (
         <>
           <Quotes quote={quoteData.quote} />
@@ -54,4 +61,5 @@ function App() {
   );
 }
 
+// Exports App component
 export default App;
