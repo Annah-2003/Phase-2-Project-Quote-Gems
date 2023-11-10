@@ -8,7 +8,7 @@ This project is a straightforward website designed to display a new inspiring an
 ##  API Used:
 https://api.quotable.io/random. This API allows you to fetch random quotes and even get a daily quote which you'd like
 ## LIVE LINK 
-https://654ddd1f3e992c465ea290dd--delightful-smakager-861f2a.netlify.app/
+https://654ddd1f3e992c465ea290dd--delightful-smakager-861f2a.netlify.app/   ( Deployed Frontend )
 ##  Features
 Daily Inspirational Quotes:
 
