@@ -7,7 +7,7 @@ This project is a straightforward website designed to display a new inspiring an
 
 ##  API Used:
 https://api.quotable.io/random. This API allows you to fetch random quotes and even get a daily quote which you'd like
-### live link
+## LIVE LINK 
 https://654ddd1f3e992c465ea290dd--delightful-smakager-861f2a.netlify.app/
 ##  Features
 Daily Inspirational Quotes:
@@ -47,8 +47,20 @@ The project is organized into several components for better maintainability and 
 
 ## Code Samples
  Explore the code samples in each component to understand the implementation details.
-## Demo Screenshots 
 
+ // Function fetches a random quote from the quotable API
+  const fetchRandomQuote = () => 
+    fetch('https://api.quotable.io/random')
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data.content && data.author) {
+          setQuoteData({ quote: data.content, author: data.author });
+        } else {
+          console.error('No quotes available in the data.');
+        }
+      })
+      .catch((error) => console.error(error));
 
 
 ##  Credits

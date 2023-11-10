@@ -1,4 +1,4 @@
-/* Add your CSS styles here */
+/*  CSS styles  */
 body {
   font-family: Arial, sans-serif;
   background-color: #131111;
@@ -38,7 +38,7 @@ body {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  background-color: #ac0c57; /* Green */
+  background-color: #ac0c57; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -46,7 +46,7 @@ body {
 }
 
 .button:hover {
-  background-color: #18010c; /* Darker green on hover */
+  background-color: #18010c; 
 }
 
 .favorite-button {
@@ -62,7 +62,7 @@ body {
   cursor: pointer;
 }
 .favorite-button:hover {
-  background-color: #240114; /* Darker green on hover */
+  background-color: #240114; 
 }
 .favorites-list {
   background-color: #fff;
