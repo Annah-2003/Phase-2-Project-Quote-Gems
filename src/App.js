@@ -51,16 +51,17 @@ function App() {
     <div className="App">
       <Header />
       {/* Display quote-related components if a quote is available */}
-      {quoteData && (
+      {quoteData ? (
         <>
           <Quotes quote={quoteData.quote} />
           <Author author={quoteData.author} />
           <Button onClick={fetchRandomQuote} label="Get Another Quote" disabled={loading} />
           <FavoriteButton onClick={addToFavorites} disabled={loading} />
-          {loading ? <p>Loading...</p> : null}
-          <FavoritesList favorites={favorites} />
         </>
+      ) : (
+        <p>Loading...</p>
       )}
+      <FavoritesList favorites={favorites} />
       <Footer />
     </div>
   );
