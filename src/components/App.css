@@ -40,7 +40,7 @@ body {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  background-color: #ac0c57;
+  background-color: #c41768c5;
   color: white;
   border: none;
   border-radius: 4px;
@@ -65,7 +65,7 @@ body {
 }
 
 .favorite-button:hover {
-  background-color: #240114;
+  background-color: #d81ddf;
 }
 
 /* Loading Animation */

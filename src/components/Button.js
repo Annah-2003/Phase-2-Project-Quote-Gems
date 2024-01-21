@@ -1,10 +1,10 @@
 // Button.js
 import React from 'react';
 
-function Button({ onClick, label }) {
+function Button({ onClick, label, loading }) {
   return (
-    <button className="button" onClick={onClick}>
-      {label}
+    <button className="button" onClick={onClick} disabled={loading}>
+      {loading ? 'Loading...' : label}
     </button>
   );
 }
