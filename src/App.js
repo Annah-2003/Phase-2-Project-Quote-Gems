@@ -6,16 +6,19 @@ import Author from './components/Author';
 import Footer from './components/Footer';
 import Button from './components/Button';
 import FavoriteButton from './components/FavoriteButton';
-import FavoritesList from './components/FavoritesList'; 
+import FavoritesList from './components/FavoritesList';
 
 // Main App Component
 function App() {
-  // State to hold the current quote data and favorite quotes
+  // State to hold the current quote data, favorite quotes, and loading status
   const [quoteData, setQuoteData] = useState(null);
   const [favorites, setFavorites] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   // Function fetches a random quote from the quotable API
   const fetchRandomQuote = () => {
+    setLoading(true);
+
     fetch('https://api.quotable.io/random')
       .then((response) => response.json())
       .then((data) => {
@@ -26,10 +29,11 @@ function App() {
           console.error('No quotes available in the data.');
         }
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
   };
 
-  // adds the current quote to list of favorites
+  // Adds the current quote to the list of favorites
   const addToFavorites = () => {
     if (quoteData) {
       setFavorites([...favorites, quoteData]);
@@ -37,7 +41,7 @@ function App() {
     }
   };
 
-  // Fetches a random quote 
+  // Fetches a random quote on initial render
   useEffect(() => {
     fetchRandomQuote();
   }, []);
@@ -46,13 +50,14 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* Display quote-related componen quote is available */}
+      {/* Display quote-related components if a quote is available */}
       {quoteData && (
         <>
           <Quotes quote={quoteData.quote} />
           <Author author={quoteData.author} />
-          <Button onClick={fetchRandomQuote} label="Get Another Quote" />
-          <FavoriteButton onClick={addToFavorites} />
+          <Button onClick={fetchRandomQuote} label="Get Another Quote" disabled={loading} />
+          <FavoriteButton onClick={addToFavorites} disabled={loading} />
+          {loading ? <p>Loading...</p> : null}
           <FavoritesList favorites={favorites} />
         </>
       )}
