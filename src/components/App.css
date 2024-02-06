@@ -29,6 +29,7 @@ body {
 .button-container {
   display: flex;
   justify-content: center;
+  align-items: center; /* Center the loading spinner vertically */
   margin-top: 20px;
 }
 
@@ -77,11 +78,11 @@ body {
 }
 
 .loading-spinner {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
+  border: 6px solid rgba(221, 157, 218, 0.719); /* Adjust border thickness and color */
+  border-top: 6px solid #b160a6; /* Change loading spinner color */
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   animation: spin 1s linear infinite;
 }
 
