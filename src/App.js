@@ -1,4 +1,3 @@
-// Imports components
 import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Quotes from './components/Quotes';
@@ -8,25 +7,20 @@ import Button from './components/Button';
 import FavoriteButton from './components/FavoriteButton';
 import FavoritesList from './components/FavoritesList';
 
-// Main App Component
 function App() {
-  // State to hold the current quote data, favorite quotes, and loading status
+  // State variables to manage quote data, favorites, and loading status
   const [quoteData, setQuoteData] = useState(null);
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [dataLoaded, setDataLoaded] = useState(false);
 
-  // Function fetches a random quote from the quotable API
+  // Function to fetch a random quote from the API
   const fetchRandomQuote = () => {
     setLoading(true);
-
     fetch('https://api.quotable.io/random')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         if (data.content && data.author) {
           setQuoteData({ quote: data.content, author: data.author });
-          setDataLoaded(true);
         } else {
           console.error('No quotes available in the data.');
         }
@@ -35,14 +29,9 @@ function App() {
       .finally(() => setLoading(false));
   };
 
-  // Function to check if a quote already exists in favorites
-  const isQuoteInFavorites = (quote) => {
-    return favorites.some((favorite) => favorite.quote === quote);
-  };
-
-  // Adds the current quote to the list of favorites if it's not already there
+  // Function to add the current quote to favorites
   const addToFavorites = () => {
-    if (quoteData && !isQuoteInFavorites(quoteData.quote)) {
+    if (quoteData && !favorites.some((favorite) => favorite.quote === quoteData.quote)) {
       setFavorites([...favorites, quoteData]);
       console.log('Quote added to favorites:', quoteData);
     } else {
@@ -50,36 +39,41 @@ function App() {
     }
   };
 
-  // Fetches a random quote on initial render
+  // Fetch a random quote on initial render
   useEffect(() => {
     fetchRandomQuote();
   }, []);
 
-  // JSX structure for App component
   return (
     <div className="App">
+      {/* Header component */}
       <Header />
-      {/* Display quote-related components if a quote is available */}
-      {quoteData && dataLoaded && (
+
+      {/* Render quote-related components if a quote is available */}
+      {quoteData && (
         <>
           <Quotes quote={quoteData.quote} />
           <Author author={quoteData.author} />
           <div className="button-container">
             <Button onClick={fetchRandomQuote} label="Get Another Quote" loading={loading} />
             {/* Display loading spinner if data is being loaded */}
-            {loading && (
-              <div className="loading-spinner"></div>
-            )}
+            {loading && <div className="loading-spinner"></div>}
           </div>
+
+          {/* Button to add the current quote to favorites */}
           <FavoriteButton onClick={addToFavorites} disabled={loading} />
+          {/* Display loading text if data is being loaded */}
           {loading ? <p>Loading..</p> : null}
+
+          {/* Display list of favorite quotes */}
           <FavoritesList favorites={favorites} />
         </>
       )}
+
+      {/* Footer component */}
       <Footer />
     </div>
   );
 }
 
-// Exports App component
 export default App;

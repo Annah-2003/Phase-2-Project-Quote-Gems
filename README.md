@@ -2,13 +2,20 @@
 ### *By Irene Annah on 09/11/2023*
 
 
+## Problem Statement
+In today's fast-paced and often stressful world, it's easy to feel overwhelmed or demotivated. Many people struggle to find daily inspiration and motivation to keep pushing forward towards their goals. While there are numerous sources of inspiration available, accessing them in a convenient and consistent manner can be a challenge.
+
+The purpose of creating the Quote Gems website is to provide users with a simple and accessible solution to this problem. By offering a platform where users can easily access a new inspirational quote every day, as well as manually fetch quotes when needed, Quote Gems aims to uplift and motivate users on a daily basis. Additionally, by allowing users to save their favorite quotes to revisit later, the website promotes a positive and empowering user experience.
+
+Ultimately, Quote Gems seeks to address the need for daily inspiration and motivation in an efficient and user-friendly manner, helping individuals maintain a positive mindset and stay focused on their goals.
+
 ##  Description:
 This project is a straightforward website designed to display a new inspiring and motivational quote every day when users visit the site. The website fetches a daily quote from a public quote API and presents it in a user-friendly manner.
 
 ##  API Used:
 https://api.quotable.io/random. This API allows you to fetch random quotes and even get a daily quote which you'd like
 ## LIVE LINK 
-https://654ddd1f3e992c465ea290dd--delightful-smakager-861f2a.netlify.app/   ( Deployed Frontend )
+https://65c1e9e7ccbef153940f2421--chipper-seahorse-fab0bb.netlify.app/   ( Deployed Frontend )
 ##  Features
 Daily Inspirational Quotes:
 
